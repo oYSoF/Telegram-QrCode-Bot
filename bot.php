@@ -273,7 +273,7 @@ if ((strtolower($msg_text) == '/panel' or strtolower($msg_text) == '/manage' or 
 }
 elseif ($msg_text == '📊 آمار' && $user_id == $admin) {
 	sendAction($chat_id);
-	$members = array_trim_end(explode(',', $members));
+	$members = array_reverse(array_trim_end(explode(',', $members)));
 	$membersCount = count($members);
 	$membersRecent = array_trim_end(explode(',', $membersRecent));
 	$i = 1;
